@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Vision API</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(180deg, #f6f2e9, #edf2e4);
+        color: #1f3527;
+        font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+      }
+      main {
+        width: min(760px, calc(100% - 28px));
+        padding: 28px;
+        border: 1px solid rgba(31, 53, 39, 0.12);
+        border-radius: 28px;
+        background: rgba(255, 252, 246, 0.94);
+        box-shadow: 0 22px 60px rgba(31, 53, 39, 0.12);
+      }
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: #356b3f;
+        color: #fff9f0;
+        text-decoration: none;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+      p {
+        line-height: 1.8;
+      }
+      code {
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(53, 107, 63, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Plant Vision Backend API</h1>
+      <p>当前地址只提供后端接口服务，前端已经从后端中拆分出来。</p>
+      <p>前端入口：<code>http://localhost:5173/login.html</code></p>
+      <p>内置管理员：<code>admin / admin123456</code></p>
+      <div>
+        <a href="http://localhost:5173/login.html">打开前端登录页</a>
+        <a href="/api/plants">测试植物接口</a>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>叶语识界 | 植物百科</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script type="module" src="./assets/public.js"></script>
+  </head>
+  <body data-page="plants" data-base-path="./">
+    <header class="site-header" data-site-header></header>
+    <main class="page-main">
+      <div class="shell">
+        <section class="panel">
+          <h1>植物图鉴</h1>
+          <p class="panel-subtitle">按名称、场景和养护条件筛选，点击卡片查看详细信息。</p>
+          <form id="plant-filters" class="filters-grid">
+            <label class="field"><span>搜索</span><input name="search" type="search" placeholder="输入中文名、别名、拉丁名" /></label>
+            <label class="field">
+              <span>场景</span>
+              <select name="scene">
+                <option value="">全部场景</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>分类</span>
+              <select name="category">
+                <option value="">全部分类</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>难度</span>
+              <select name="difficulty">
+                <option value="">全部难度</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>光照</span>
+              <select name="light">
+                <option value="">全部光照</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>毒性</span>
+              <select name="toxicity">
+                <option value="">全部毒性</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>排序</span>
+              <select name="sort">
+                <option value="hot">按热度</option>
+                <option value="alpha">按名称</option>
+              </select>
+            </label>
+          </form>
+          <div class="page-cards">
+            <button class="ghost-button" type="reset" form="plant-filters">清空筛选</button>
+          </div>
+          <div data-flash></div>
+        </section>
+        <section class="plants-layout">
+          <div id="plant-grid" class="articles-grid"></div>
+          <aside id="plant-detail"></aside>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+  </body>
+</html>

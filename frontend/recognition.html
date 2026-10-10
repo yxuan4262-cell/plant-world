@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>叶语识界 | 植物识别</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script type="module" src="./assets/public.js"></script>
+  </head>
+  <body data-page="recognition" data-base-path="./">
+    <header class="site-header" data-site-header></header>
+    <main class="page-main">
+      <div class="shell recognition-layout">
+        <section class="panel">
+          <h1>植物识别</h1>
+          <p class="panel-subtitle">上传一张清晰照片，系统会给出识别结果并推荐对应图鉴。</p>
+          <form id="recognition-form" class="content-grid">
+            <div class="field">
+              <span>上传植物照片</span>
+              <input id="recognition-file" type="file" accept="image/*" required />
+            </div>
+            <button class="primary-button" type="submit">开始识别</button>
+          </form>
+          <div data-flash></div>
+          <div id="preview" class="panel"></div>
+          <div id="result"></div>
+        </section>
+        <aside id="recognition-tips"></aside>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+  </body>
+</html>

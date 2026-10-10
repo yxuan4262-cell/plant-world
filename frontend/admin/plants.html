@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>叶语识界后台 | 植物管理</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <script type="module" src="../assets/admin.js"></script>
+  </head>
+  <body data-page="adminPlants" data-base-path="../">
+    <header class="site-header" data-site-header></header>
+    <main class="page-main">
+      <div class="shell">
+        <div class="admin-grid">
+          <section class="admin-panel">
+            <h1>植物管理</h1>
+            <p class="panel-subtitle">这里是独立后台页，不会出现在前台首页。</p>
+            <form id="plant-form">
+              <input type="hidden" name="id" />
+              <div class="admin-form-grid">
+                <label class="field"><span>中文名</span><input name="chineseName" required /></label>
+                <label class="field"><span>拉丁名</span><input name="latinName" /></label>
+                <label class="field"><span>别名</span><input name="aliasName" /></label>
+                <label class="field"><span>封面图 URL</span><input name="imageUrl" /></label>
+                <label class="field"><span>分类</span><input name="category" /></label>
+                <label class="field"><span>场景标签</span><input name="sceneTag" /></label>
+                <label class="field"><span>养护难度</span><input name="difficulty" /></label>
+                <label class="field"><span>浇水</span><input name="waterCycle" /></label>
+                <label class="field"><span>光照</span><input name="lightPreference" /></label>
+                <label class="field"><span>温度</span><input name="temperatureRange" /></label>
+                <label class="field"><span>花期</span><input name="bloomSeason" /></label>
+                <label class="field"><span>毒性</span><input name="toxicityLevel" /></label>
+                <label class="field"><span>热度</span><input name="hotScore" type="number" /></label>
+                <label class="field"><span>素材 ID</span><input name="galleryAssetIds" /></label>
+                <label class="field wide"><span>摘要</span><textarea name="summary"></textarea></label>
+                <label class="field wide"><span>识别特征</span><textarea name="featureText"></textarea></label>
+                <label class="field wide"><span>养护建议</span><textarea name="careTips"></textarea></label>
+                <label class="field wide"><span>科学笔记</span><textarea name="scienceNote"></textarea></label>
+                <label class="field"><span>诗题</span><input name="poemTitle" /></label>
+                <label class="field"><span>诗作者</span><input name="poemAuthor" /></label>
+                <label class="field wide"><span>诗句摘录</span><textarea name="poemExcerpt"></textarea></label>
+              </div>
+              <button class="primary-button" type="submit">保存植物</button>
+            </form>
+            <div data-flash></div>
+          </section>
+          <aside id="admin-plant-list" class="admin-list"></aside>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+  </body>
+</html>

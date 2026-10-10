@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>叶语识界 | 登录</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script type="module" src="./assets/auth.js"></script>
+  </head>
+  <body class="auth-body" data-page="login" data-base-path="./">
+    <div class="liquid-bg">
+      <video autoplay muted loop playsinline>
+        <source src="./assets/auth-liquid-bg.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="liquid-overlay"></div>
+    <main class="auth-shell">
+      <div class="auth-stage">
+        <section class="auth-panel">
+          <div class="brand auth-brand">
+            <span class="brand-badge">
+              <img src="./assets/site-logo.jpg" alt="叶语识界 Logo" />
+            </span>
+            <span class="brand-copy">
+              <strong>叶语识界</strong>
+              <small>植物识别与科普平台</small>
+            </span>
+          </div>
+          <h1>登录</h1>
+          <p class="panel-subtitle">
+            选择身份后进入对应页面，普通用户进入前台，管理员进入后台。
+          </p>
+          <form>
+            <div class="field">
+              <span>用户名</span>
+              <input name="username" type="text" placeholder="请输入用户名" required />
+            </div>
+            <div class="field">
+              <span>密码</span>
+              <input name="password" type="password" placeholder="请输入密码" required />
+            </div>
+            <div class="field">
+              <span>登录角色</span>
+              <div class="auth-role-grid">
+                <label class="role-choice">
+                  <input name="role" type="radio" value="USER" checked />
+                  <span>普通用户</span>
+                </label>
+                <label class="role-choice">
+                  <input name="role" type="radio" value="ADMIN" />
+                  <span>管理员</span>
+                </label>
+              </div>
+            </div>
+            <button class="primary-button" type="submit">登录</button>
+          </form>
+          <div data-flash></div>
+          <div class="auth-links">
+            <a class="ghost-button" href="./register.html">去注册</a>
+          </div>
+        </section>
+        <aside class="auth-showcase panel">
+          <h2>开始使用叶语识界</h2>
+          <p class="panel-subtitle">
+            登录后可以进行植物识别、浏览图鉴和阅读科普文章。
+          </p>
+          <div class="tips-list">
+            <p>普通用户可识别植物、查看图鉴、阅读文章和回看历史记录。</p>
+            <p>管理员可维护植物资料、文章内容和素材资源。</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

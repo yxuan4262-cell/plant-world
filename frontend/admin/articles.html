@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>叶语识界后台 | 文章管理</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <script type="module" src="../assets/admin.js"></script>
+  </head>
+  <body data-page="adminArticles" data-base-path="../">
+    <header class="site-header" data-site-header></header>
+    <main class="page-main">
+      <div class="shell">
+        <div class="admin-grid">
+          <section class="admin-panel">
+            <h1>文章管理</h1>
+            <form id="article-form">
+              <input type="hidden" name="id" />
+              <div class="admin-form-grid">
+                <label class="field wide"><span>标题</span><input name="title" required /></label>
+                <label class="field wide"><span>摘要</span><textarea name="summary"></textarea></label>
+                <label class="field wide"><span>封面 URL</span><input name="coverImageUrl" /></label>
+                <label class="field"><span>来源名称</span><input name="sourceName" /></label>
+                <label class="field"><span>来源链接</span><input name="sourceUrl" /></label>
+                <label class="field">
+                  <span>状态</span>
+                  <select name="status">
+                    <option value="PUBLISHED">已发布</option>
+                    <option value="DRAFT">草稿</option>
+                  </select>
+                </label>
+                <label class="field wide"><span>正文</span><textarea name="content"></textarea></label>
+              </div>
+              <button class="primary-button" type="submit">保存文章</button>
+            </form>
+            <div data-flash></div>
+          </section>
+          <aside id="admin-article-list" class="admin-list"></aside>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+  </body>
+</html>

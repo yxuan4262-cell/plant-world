@@ -1,0 +1,19 @@
+﻿# 编译产物 / jar 包（后端源码不在本包内，只保留可分享的前端与补丁源码）
+*.jar
+*.jar.bak
+*.jar.*.backup
+
+# 运行时数据（H2 数据库、上传文件）
+runtime/
+
+# 测试与日志产物
+test-results/
+*.log
+
+# IDE
+.idea/
+*.iml
+
+# 系统文件
+.DS_Store
+Thumbs.db
